@@ -1,0 +1,12 @@
+{
+  "name": "leetcode-in-ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "shushu<shushu@hanfu.la>",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
