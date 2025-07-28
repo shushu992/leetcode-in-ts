@@ -1,12 +1,4 @@
-class ListNode {
-  val: number;
-  next: ListNode | null;
-
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
-  }
-}
+import ListNode, { arrToListNode } from './definition/list-node';
 
 /**
  * https://leetcode.com/problems/add-two-numbers/description/
@@ -53,9 +45,9 @@ if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
 
   it('example 1', () => {
-    const l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-    const l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
-    const output = new ListNode(7, new ListNode(0, new ListNode(8)));
+    const l1 = arrToListNode(2, 4, 3);
+    const l2 = arrToListNode(5, 6, 4);
+    const output = arrToListNode(7, 0, 8);
     expect(addTwoNumbers(l1, l2)).toEqual(output);
   });
 
@@ -67,9 +59,9 @@ if (import.meta.vitest) {
   });
 
   it('example 3', () => {
-    const l1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null)))))));
-    const l2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
-    const output = new ListNode(8, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(0, new ListNode(0, new ListNode(0, new ListNode(1))))))));
+    const l1 = arrToListNode(9, 9, 9, 9, 9, 9, 9);
+    const l2 = arrToListNode(9, 9, 9, 9);
+    const output = arrToListNode(8, 9, 9, 9, 0, 0, 0, 1);
     expect(addTwoNumbers(l1, l2)).toEqual(output);
   });
 
