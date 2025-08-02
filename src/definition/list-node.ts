@@ -54,4 +54,28 @@ if (import.meta.vitest) {
     const arr = listNodeToArray(node);
     expect(arr).toEqual([ 1, 3, 5, 7 ]);
   });
+
+  it('list equals to list', () => {
+    const arr1 = arrToListNode(1, 3, 5, 7);
+    const arr2 = arrToListNode(1, 3, 5, 7);
+    expect(arr1).toEqual(arr2);
+  });
+
+  it('arr equals to arr', () => {
+    const node1 =
+      new ListNode(1,
+        new ListNode(3,
+          new ListNode(5,
+            new ListNode(7))));
+    const list1 = listNodeToArray(node1);
+
+    const node2 =
+      new ListNode(1,
+        new ListNode(3,
+          new ListNode(5,
+            new ListNode(7))));
+    const list2 = listNodeToArray(node2);
+
+    expect(list1).toEqual(list2);
+  });
 }
