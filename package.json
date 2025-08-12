@@ -1,12 +1,14 @@
 {
   "name": "leetcode-in-ts",
   "scripts": {
-    "test": "vitest"
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "author": "shushu<shushu@hanfu.la>",
   "type": "module",
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "@vitest/coverage-v8": "3.2.4",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
   }
 }
